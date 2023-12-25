@@ -22,7 +22,7 @@ class JokeSeeder extends Seeder
 Штирлиц молча берёт лист бумаги и пишет ответный донос:
 "Группенфюреру СС Генриху Мюллеру. Мои соседи знают русский язык и, что особенно подозрительно, разбираются в ненормативной русской лексике!".
 JOKE,
-                    'source' => 'https://www.anekdot.ru/tags/%D0%A8%D1%82%D0%B8%D1%80%D0%BB%D0%B8%D1%86/?type=anekdots&',
+                    'source' => 'anekdot.ru',
                     'created_at' => now()
                 ],
             )

@@ -2,6 +2,7 @@
 
 namespace App\Telegram;
 
+use DefStudio\Telegraph\Enums\ChatActions;
 use DefStudio\Telegraph\Handlers\WebhookHandler;
 use App\Models\Joke;
 use Illuminate\Support\Facades\Log;
@@ -16,6 +17,7 @@ class Handler extends WebhookHandler
     public function joke(): void
     {
         Log::debug("Telling a joke");
+        $this->chat->action(ChatActions::TYPING)->send();
 
         $text = '';
 
@@ -31,7 +33,7 @@ class Handler extends WebhookHandler
 
 {$joke[0]->body}
 
-<i>{$joke[0]->source}</i>";
+<i>Источник: {$joke[0]->source}</i>
 MSG;
         }
 
