@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
-class JokeSeeder extends Seeder
+class SimpleJokeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
