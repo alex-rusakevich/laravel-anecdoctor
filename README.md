@@ -22,4 +22,4 @@ php artisan n-serve
 
 ## Скриншоты
 
-<img src="./_repo/screenshot-1.png" width="280">
+<img src="./_repo/screenshot-1.png" width="360">
