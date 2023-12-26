@@ -1,17 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Orchid\Screens;
 
-use Orchid\Support\Facades\Layout;
+use App\Models\Joke;
+use App\Orchid\Layouts\JokesTable;
+use Orchid\Screen\Screen;
 
-use Orchid\Screen\{
-    Actions\Link,
-    Screen
-};
-
-class PlatformScreen extends Screen
+class JokeListScreen extends Screen
 {
     /**
      * Fetch data to be displayed on the screen.
@@ -20,23 +15,29 @@ class PlatformScreen extends Screen
      */
     public function query(): iterable
     {
-        return [];
+        $jokes = Joke::paginate();
+
+        return [
+            'jokes' => $jokes
+        ];
     }
 
     /**
      * The name of the screen displayed in the header.
+     *
+     * @return string|null
      */
     public function name(): ?string
     {
-        return 'Index';
+        return 'JokeListScreen';
     }
 
     /**
-     * Display header description.
+     * The description is displayed on the user's screen under the heading
      */
     public function description(): ?string
     {
-        return 'Welcome to your Anecdoctor admin.';
+        return 'Jokes administrating screen';
     }
 
     /**
@@ -52,16 +53,12 @@ class PlatformScreen extends Screen
     /**
      * The screen's layout elements.
      *
-     * @return \Orchid\Screen\Layout[]
+     * @return \Orchid\Screen\Layout[]|string[]
      */
     public function layout(): iterable
     {
         return [
-            Layout::rows([
-                Link::make('Link to the jokes list')
-                    ->icon('bs.link-45deg')
-                    ->route('platform.jokes.list'),
-            ])
+            JokesTable::class,
         ];
     }
 }

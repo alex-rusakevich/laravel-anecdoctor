@@ -1,0 +1,6 @@
+body.page-platform-jokes-list {
+    td[data-column="body"] {
+        white-space: pre-line;
+        word-break: break-word;
+    }
+}

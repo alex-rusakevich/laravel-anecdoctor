@@ -27,6 +27,7 @@ class AnekdotRuSeeder extends Seeder
                 continue;
 
             $joke_text = preg_replace("/<br\s?\/?>/i", "\n", $joke->innerHtml());
+            $joke_text = trim(strip_tags($joke_text));
 
             if (hasCurse($joke_text)) {
                 Log::info("Skipped a joke due to curse words");
