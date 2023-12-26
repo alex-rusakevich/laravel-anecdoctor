@@ -15,8 +15,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "paquettg/php-html-parser": "^2.2",
-        "tcg/voyager": "dev-1.6-l10"
+        "orchid/platform": "^14.17",
+        "paquettg/php-html-parser": "^2.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -48,7 +48,8 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan orchid:publish --ansi"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

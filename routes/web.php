@@ -19,8 +19,3 @@ Route::get('/', function () {
 });
 
 Route::get('/api/joke', [JokeController::class, 'getRandomJoke']);
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
