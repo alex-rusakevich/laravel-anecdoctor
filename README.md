@@ -17,7 +17,9 @@ API и Телеграм-бот для получения шуток и анек�
 ```sh
 ngrok http 8000
 
-php artisan n-serve
+npm run dev
+
+php artisan nserve
 ```
 
 ## Скриншоты

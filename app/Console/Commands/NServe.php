@@ -11,7 +11,7 @@ class NServe extends Command
      *
      * @var string
      */
-    protected $signature = 'n-serve';
+    protected $signature = 'nserve';
 
     /**
      * The console command description.

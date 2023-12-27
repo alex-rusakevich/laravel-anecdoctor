@@ -89,7 +89,7 @@ class JokeEditScreen extends Screen
 
                 Input::make('joke.source')
                     ->title('Source')
-                    ->placeholder('Attractive but mysterious title')
+                    ->placeholder('')
             ])
         ];
     }

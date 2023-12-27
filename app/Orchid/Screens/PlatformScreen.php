@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Orchid\Screens;
 
+use Illuminate\Support\Facades\Auth;
 use Orchid\Support\Facades\Layout;
 
 use Orchid\Screen\{
@@ -56,6 +57,8 @@ class PlatformScreen extends Screen
      */
     public function layout(): iterable
     {
+        // $user_name = Auth::user()->name;
+
         return [
             Layout::rows([
                 Link::make('Link to the jokes list')
